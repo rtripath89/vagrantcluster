@@ -23,19 +23,20 @@ Vagrant.configure("2") do |config|
   config.vm.define "master" do |master|
     master.vm.box = "centos/7"
     master.vm.hostname = "master"
-    master.vm.network :private_network, ip: "192.168.100.2"
+    master.vm.network "private_network", ip: "192.168.100.2", virtualbox__intnet: "compute"
   end
 
   config.vm.define "fe1" do |fe1|
     fe1.vm.box = "centos/7"
     fe1.vm.hostname = "fe1"
-    fe1.vm.network :private_network, ip: "192.168.100.3"
+    fe1.vm.network "private_network", ip: "192.168.100.3", virtualbox__intnet: "compute"
+    fe1.vm.network :forwarded_port, guest: 80, host: 4567
   end
 
   config.vm.define "node01" do |node01|
     node01.vm.box = "centos/7"
     node01.vm.hostname = "node01"
-    node01.vm.network :private_network, ip: "192.168.100.101"
+    node01.vm.network "private_network", ip: "192.168.100.101", virtualbox__intnet: "compute"
   end
 
 #  config.vm.define "node02" do |node02|
