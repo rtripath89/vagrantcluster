@@ -12,6 +12,7 @@ Getting Started
 1. Run `vagrant up` to fire up the cluster
 1. Once the cluster is booted, you can run `vagrant ssh master` to log in to the master node, or `vagrant ssh fe1` to log in to the frontend
 1. You can access your OpenonDemand by running 'localhost:4567' in your local browser.
+1. Once all the VMs are up, log into fe1, using `vagrant ssh fe1`, and run `sudo scl enable httpd24 -- htpasswd -c /opt/rh/httpd24/root/etc/httpd/.htpasswd $USER` to add a user and password for you to access your OpenonDemand webapp.
 
 A note on security
 ------------------
