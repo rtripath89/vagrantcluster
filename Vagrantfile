@@ -38,23 +38,23 @@ Vagrant.configure("2") do |config|
     node01.vm.network :private_network, ip: "192.168.100.101"
   end
 
-  config.vm.define "node02" do |node02|
-    node02.vm.box = "centos/7"
-    node02.vm.hostname = "node02"
-    node02.vm.network :private_network, ip: "192.168.100.102"
-  end
+#  config.vm.define "node02" do |node02|
+#    node02.vm.box = "centos/7"
+#    node02.vm.hostname = "node02"
+#    node02.vm.network :private_network, ip: "192.168.100.102"
+#  end
 
-  config.vm.define "node03" do |node03|
-    node03.vm.box = "centos/7"
-    node03.vm.hostname = "node03"
-    node03.vm.network :private_network, ip: "192.168.100.103"
-  end
+#  config.vm.define "node03" do |node03|
+#    node03.vm.box = "centos/7"
+#    node03.vm.hostname = "node03"
+#    node03.vm.network :private_network, ip: "192.168.100.103"
+#  end
 
-  config.vm.define "node04" do |node04|
-    node04.vm.box = "centos/7"
-    node04.vm.hostname = "node04"
-    node04.vm.network :private_network, ip: "192.168.100.104"
-  end
+#  config.vm.define "node04" do |node04|
+#    node04.vm.box = "centos/7"
+#    node04.vm.hostname = "node04"
+#    node04.vm.network :private_network, ip: "192.168.100.104"
+#  end
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs

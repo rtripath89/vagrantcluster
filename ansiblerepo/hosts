@@ -11,7 +11,7 @@ fe1
 sshgroup=fe
 
 [compute]
-node[01:04]
+node01
 
 [compute:vars]
 sshgroup=compute
